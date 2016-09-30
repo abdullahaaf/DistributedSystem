@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package udp;
+package UserDatagramProtocol;
 import java.io.*;
 import java.net.*;
 /**

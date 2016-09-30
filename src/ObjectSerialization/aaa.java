@@ -64,7 +64,7 @@ public class aaa implements Serializable{
         @Override
         public String toString()
         {
-            return nama+" "+jurusan+" "+asal+" "+"("+nim+")";
+            return (nim)+" "+nama+" "+jurusan+" "+asal;
         }
             
 }
