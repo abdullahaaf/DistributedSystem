@@ -12,48 +12,47 @@ import java.util.logging.Logger;
  * @author vectorr
  */
 public class nomor3 extends Thread{
-        static boolean ganjil = false;
-    static boolean berhenti = false;
-
-    @Override
+   int count = 0;
+static boolean param =true;
     public void run() {
-        int count = 0;
-        while (true) {
+        System.out.println("I can count, Wath me go !");
+        for (;;) {
+            if(param){
             count++;
             if (count % 2 == 0) {
                 System.out.print(count + " ");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                   
-                }
-            } else if (ganjil == true) {
-                while (true) {
-                    count--;
-                    if (count % 2 == 1) {
-                        System.out.print(count + " ");
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException ex) {
-                           
-                        }
-                    } else if (berhenti == true) {
-                        System.out.println("Counter selesai");
-                        System.exit(0);
-                    }
-                }
             }
-       }
+            }else{
+                count--;
+                if (count % 2 != 0) {
+                System.out.print(count + " ");
+            }
+            }
+            
+            try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ie) {
+                }
+        }
+        
     }
 
-    public static void main(String[] args) throws IOException {
-        Thread t = new nomor3();
-        t.start();
-        System.out.println("Tekan Enter untuk Bilangan Ganjil");
+    public static void main(String[] args) throws java.io.IOException {
+        Thread counter = new nomor3();
+        nomor3 jalan = new nomor3();
+        counter.start();
+
+        System.out.println("Press any enter to Suspend the thread counting");
         System.in.read();
-        ganjil = true;
-        System.out.println("Tekan Enter Untuk Berhenti");
+        counter.suspend();
+        
+        System.out.println("Press any enter to resume the thread counting");
         System.in.read();
-        berhenti = true;
+        counter.resume();
+        param = false;
+        
+        System.out.println("Press any enter to stop the thread counting");
+        System.in.read();
+        counter.stop();
     }
 }

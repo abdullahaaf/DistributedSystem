@@ -10,65 +10,75 @@ package multithread.asistensi;
  * @author vectorr
  */
 public class nomor2 extends Thread{
-    int i;
-    public nomor2 (int i)
+   
+    private String dokter = "pasien diperiksa dokter";
+    private String perawat1 = "pasien dirawat perawat 1";
+    private String perawat2 = "pasien dirawat perawat 2";
+    private String kasir = "pasien membayar ke kasir";
+    
+    public void setString (String d, String p1, String p2, String k)
     {
-        this.i = i;
+        dokter = d;
+        perawat1 = p1;
+        perawat2 = p2;
+        kasir = k;
     }
     
     @Override
     public void run()
     {
-        if (i == 1)
+        try
         {
-            for (int a = 1 ; a <= 10 ; a++)
-            {
-                System.out.println("pasien ke "+a+" dirawat oleh dokter");
-            }
-        }
-        if ( i == 2)
+            System.out.println(dokter+perawat1+perawat2+kasir);
+            Thread.sleep(1000);
+        }catch (InterruptedException ex)
         {
-            for (int a = 1 ; a <= 5 ; a++)
-            {
-                System.out.println("pasien ke "+a+" dirawat oleh perawat 1");
-            }
+            ex.printStackTrace();
         }
-        if (i==3)
-        {
-            for (int a = 6 ; a<= 10 ; a++)
-            {
-                System.out.println("pasien ke "+a+" dirawat oleh perawat 2");
-            }
-        }
-        
-        if (i==4)
-        {
-            for (int a = 1 ; a <= 10 ; a++)
-            {
-                System.out.println("pasien ke "+a+" bayar ke kasir");
-            }
-        }
+//        if (i == 1)
+//        {
+//            for (int a = 1 ; a <= 10 ; a++)
+//            {
+//                System.out.println("pasien ke "+a+" dirawat oleh dokter");
+//            }
+//        }
+//        if ( i == 2)
+//        {
+//            for (int a = 1 ; a <= 5 ; a++)
+//            {
+//                System.out.println("pasien ke "+a+" dirawat oleh perawat 1");
+//            }
+//        }
+//        if (i==3)
+//        {
+//            for (int a = 6 ; a<= 10 ; a++)
+//            {
+//                System.out.println("pasien ke "+a+" dirawat oleh perawat 2");
+//            }
+//        }
+//        
+//        if (i==4)
+//        {
+//            for (int a = 1 ; a <= 10 ; a++)
+//            {
+//                System.out.println("pasien ke "+a+" bayar ke kasir");
+//            }
+//        }
         
 
     }
     
     public static void main(String[] args) throws InterruptedException {
         
-        Thread rumahsakit = new nomor2(1);
-        rumahsakit.start();
-        Thread.sleep(1000);
-        
-        Thread perawat1 = new nomor2(2);
-        perawat1.start();
-        Thread.sleep(1000);
-        
-        Thread perawat2 = new nomor2(3);
-        perawat2.start();
-        Thread.sleep(1000);
-        
-        Thread kasir = new nomor2(4);
-        kasir.start();
-        Thread.sleep(1000);
+        for ( int i = 0 ; i <= 10 ; i++)
+        {
+            if ( i == 0 && i <= 10)
+            {
+                nomor3 st = new nomor3();
+                //st.setName(dok);
+                
+            }
+        }
         
     }
 }
