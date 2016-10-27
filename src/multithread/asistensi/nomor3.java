@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  * @author vectorr
  */
 public class nomor3 extends Thread{
-   int count = 0;
+int count = 0;
 static boolean param =true;
     public void run() {
         System.out.println("I can count, Wath me go !");

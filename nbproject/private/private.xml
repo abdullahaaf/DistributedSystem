@@ -3,12 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/multithread/asistensi/nomor2.java</file>
-            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/multithread/asistensi/nomor1.java</file>
-            <file>jar:file:/C:/Users/vectorr/Documents/DistributedSystem/src/multithread/asistensi.zip!/asistensi/nomor1.java</file>
-            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/multithread/asistensi/nomor4Client.java</file>
-            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/multithread/asistensi/nomor3.java</file>
-            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/multithread/asistensi/nomor4Server.java</file>
+            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/tiket_uts/MultiThreadClient.java</file>
+            <file>file:/C:/Users/vectorr/Documents/DistributedSystem/src/tiket_uts/MultiThreadServer.java</file>
         </group>
     </open-files>
 </project-private>

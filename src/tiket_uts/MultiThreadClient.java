@@ -4,13 +4,17 @@
  * and open the template in the editor.
  */
 package tiket_uts;
+import java.awt.Image;
 import java.io.DataInputStream;
 import java.io.PrintStream;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import javax.imageio.*;
 /**
  *
  * @author vectorr
@@ -34,9 +38,8 @@ public class MultiThreadClient implements Runnable{
     String host = "localhost";
 
     if (args.length < 2) {
-      System.out
-          .println("Usage: java MultiThreadChatClient <host> <portNumber>\n"
-              + "Now using host=" + host + ", portNumber=" + portNumber);
+//      System.out.println("Usage: java MultiThreadChatClient <host> <portNumber>\n"
+//              + "Now using host=" + host + ", portNumber=" + portNumber);
     } else {
       host = args[0];
       portNumber = Integer.valueOf(args[1]).intValue();
@@ -53,7 +56,7 @@ public class MultiThreadClient implements Runnable{
     } catch (UnknownHostException e) {
       System.err.println("Don't know about host " + host);
     } catch (IOException e) {
-      System.err.println("Couldn't get I/O for the connection to the host "
+      System.err.println("CouSldn't get I/O for the connection to the host "
           + host);
     }
 
@@ -69,6 +72,15 @@ public class MultiThreadClient implements Runnable{
         while (!closed) {
           os.println(inputLine.readLine().trim());
         }
+//        while (inputLine.readLine().trim().equals("1"))
+//        {
+//            Image image = null;
+//            File sourcefile = new File("C:/Users/vectorr/Pictures/git nafian.png");
+//            image = ImageIO.read(sourcefile);
+//            
+//            DataInputStream is = new DataInputStream(new FileInputStream("C:/Users/vectorr/Pictures/git nafian.png"));
+//            image = ImageIO.read(is);
+//        }
         /*
          * Close the output stream, close the input stream, close the socket.
          */
